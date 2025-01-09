@@ -52,3 +52,11 @@ pip install -r requirements.txt
   }
 }
 ```
+- Replace YOUR_CLIENT_ID, YOUR_PROJECT_ID, and YOUR_CLIENT_SECRET with your own credentials obtained from the Google Developer Console.
+
+<h4>Running the App</h4>
+
+1. Run the Flask application:
+
+```bash
+ python app.py
