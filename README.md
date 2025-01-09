@@ -18,4 +18,17 @@ This is a simple Flask application that allows users to:
 git clone https://github.com/yourusername/news_calendar_app.git
 cd news_calendar_app
 
+## Dependencies
 
+This project requires the following Python libraries:
+
+- **Flask**: A web framework for Python.
+- **Requests**: For making HTTP requests to the NewsAPI.
+- **Google API Client**: For interacting with the Google Calendar API.
+- **OAuth2Client**: For handling OAuth authentication with Google services.
+- **rfc3339**: For formatting date-time in RFC 3339 format for Google Calendar.
+
+You can install all dependencies by running the following command:
+
+```bash
+pip install -r requirements.txt
