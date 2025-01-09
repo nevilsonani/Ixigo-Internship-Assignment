@@ -17,5 +17,6 @@ This is a simple Flask application that allows users to:
 ```bash
 git clone https://github.com/yourusername/news_calendar_app.git
 cd news_calendar_app
+```
 
-### 2.SetUp
+### 2. Install dependencies:
