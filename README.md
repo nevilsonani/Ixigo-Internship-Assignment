@@ -31,3 +31,24 @@ pip install -r requirements.txt
 - Create OAuth 2.0 Credentials for a Web Application.
 - Add http://localhost as the Authorized Redirect URI.
 - Download the client_secrets.json file and place it in the root directory of the project.
+
+### 4. Get a NewsAPI Key:
+
+- Go to NewsAPI, sign up, and obtain your API key.
+- Replace your_news_api_key in the code with your API key.
+
+### 5. Set up your client_secrets.json with your Google OAuth credentials. Here’s an example of the file structure:
+
+```bash
+{
+  "installed": {
+    "client_id": "YOUR_CLIENT_ID.apps.googleusercontent.com",
+    "project_id": "YOUR_PROJECT_ID",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_secret": "YOUR_CLIENT_SECRET",
+    "redirect_uris": ["http://localhost"]
+  }
+}
+```
