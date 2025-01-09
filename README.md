@@ -19,14 +19,3 @@ git clone https://github.com/yourusername/news_calendar_app.git
 cd news_calendar_app
 
 
-
-
-
-
-
-
-If the News API returns an error, ensure that:
-
-You’ve replaced your_news_api_key with your valid NewsAPI key in the code.
-
-
