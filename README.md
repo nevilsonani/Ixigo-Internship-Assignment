@@ -62,4 +62,36 @@ pip install -r requirements.txt
  python app.py
 ```
 
-2. Navigate to http://localhost:8080 in your web browser.
+2.  Navigate to http://localhost:8080 in your web browser.
+
+3. OAuth Login:
+
+- The first time you visit the site, you will be asked to log in to your Google account and grant permission to access your Google Calendar.
+- Once authorized, you’ll be redirected back to the app.
+
+4. Fetch News:
+
+- Enter a topic in the form (e.g., "Aloke Bajpai ixigo") to fetch news articles from the past two weeks.
+- Click the "Add to Calendar" button to add the selected news article as an event in your Google Calendar.
+
+<h3>File Structure</h3>
+
+news-reader-calendar/
+│
+├── app.py                   # Main Flask app
+├── client_secrets.json       # Google OAuth 2.0 credentials (do not share this publicly)
+├── requirements.txt          # Python dependencies
+├── templates/
+│   ├── index.html            # HTML for displaying news articles and Google login
+├── static/
+│   └── style.css             # Basic CSS for styling the app
+
+## Dependencies
+
+This project requires the following Python libraries:
+
+- **Flask**: A web framework for Python.
+- **Requests**: For making HTTP requests to the NewsAPI.
+- **Google API Client**: For interacting with the Google Calendar API.
+- **OAuth2Client**: For handling OAuth authentication with Google services.
+- **rfc3339**: For formatting date-time in RFC 3339 format for Google Calendar.
