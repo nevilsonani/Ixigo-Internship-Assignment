@@ -15,7 +15,7 @@ This is a simple Flask application that allows users to:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/news_calendar_app.git
+git clone gh repo clone nevilsonani/Ixigo-Internship-Assignment
 cd news_calendar_app
 ```
 
