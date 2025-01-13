@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Reader</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>News Reader</h1>
+        <form method="post">
+            <input type="text" name="query" placeholder="Enter topic" required>
+            <button type="submit">Search</button>
+        </form>
+        <div class="news">
+            {% for article in news %}
+            <div class="article">
+                <h2><a href="{{ article.url }}">{{ article.title }}</a></h2>
+                <p>{{ article.description }}</p>
+                <p><small>{{ article.publishedAt }}</small></p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
