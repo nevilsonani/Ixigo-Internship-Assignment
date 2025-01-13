@@ -1,6 +1,6 @@
 # Ixigo-Internship-Assignment
 
-# News Reader & Calendar Integration
+# News Reader
 
 This is a simple Flask application that allows users to:
 1. Search for news articles based on a topic using NewsAPI.
@@ -15,8 +15,7 @@ This is a simple Flask application that allows users to:
 ### 1. Clone the repository
 
 ```bash
-git clone gh repo clone nevilsonani/Ixigo-Internship-Assignment
-cd news_calendar_app
+git clone nevilsonani/Ixigo-Internship-Assignment
 ```
 
 ### 2. Install dependencies:
@@ -25,34 +24,19 @@ cd news_calendar_app
 pip install -r requirements.txt
 ```
 
-### 3. Create a new project in the Google Developer Console:
+### 3. Create a config.py file with your News API key:
 
-- Enable the Google Calendar API.
-- Create OAuth 2.0 Credentials for a Web Application.
-- Add http://localhost as the Authorized Redirect URI.
-- Download the client_secrets.json file and place it in the root directory of the project.
+```bash
+NEWS_API_KEY = 'your_news_api_key_here'
+NEWS_API_URL = 'https://newsapi.org/v2/everything'
+```
 
 ### 4. Get a NewsAPI Key:
 
 - Go to NewsAPI, sign up, and obtain your API key.
 - Replace your_news_api_key in the code with your API key.
 
-### 5. Set up your client_secrets.json with your Google OAuth credentials. Here’s an example of the file structure:
 
-```bash
-{
-  "installed": {
-    "client_id": "YOUR_CLIENT_ID.apps.googleusercontent.com",
-    "project_id": "YOUR_PROJECT_ID",
-    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-    "token_uri": "https://oauth2.googleapis.com/token",
-    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-    "client_secret": "YOUR_CLIENT_SECRET",
-    "redirect_uris": ["http://localhost"]
-  }
-}
-```
-- Replace YOUR_CLIENT_ID, YOUR_PROJECT_ID, and YOUR_CLIENT_SECRET with your own credentials obtained from the Google Developer Console.
 
 <h2>Running the App</h2>
 
@@ -62,36 +46,30 @@ pip install -r requirements.txt
  python app.py
 ```
 
-2.  Navigate to http://localhost:8080 in your web browser.
-
-3. OAuth Login:
-
-- The first time you visit the site, you will be asked to log in to your Google account and grant permission to access your Google Calendar.
-- Once authorized, you’ll be redirected back to the app.
-
-4. Fetch News:
-
-- Enter a topic in the form (e.g., "Aloke Bajpai ixigo") to fetch news articles from the past two weeks.
-- Click the "Add to Calendar" button to add the selected news article as an event in your Google Calendar.
+2.  Open your browser and go to http://127.0.0.1:5000/
 
 <h3>File Structure</h3>
 
-news-reader-calendar/
-│
-├── app.py                   # Main Flask app
-├── client_secrets.json       # Google OAuth 2.0 credentials (do not share this publicly)
-├── requirements.txt          # Python dependencies
-├── templates/
-│   ├── index.html            # HTML for displaying news articles and Google login
-├── static/
-│   └── style.css             # Basic CSS for styling the app
+# News Reader
 
-## Dependencies
+A simple news reader application built using Python and Flask that fetches news articles based on a topic from the past two weeks using the News API.
+
+## Folder Structure
+
+```plaintext
+├── app.py
+├── templates/
+│   └── index.html
+├── static/
+│   └── style.css
+├── config.py
+├── requirements.txt
+└── news_fetcher.py
+
+
+## Usage
 
 This project requires the following Python libraries:
 
-- **Flask**: A web framework for Python.
-- **Requests**: For making HTTP requests to the NewsAPI.
-- **Google API Client**: For interacting with the Google Calendar API.
-- **OAuth2Client**: For handling OAuth authentication with Google services.
-- **rfc3339**: For formatting date-time in RFC 3339 format for Google Calendar.
+1. Enter a topic in the input field and click "Search."
+2. The application will fetch and display news articles related to the topic from the past two weeks.
