@@ -15,7 +15,7 @@ This is a simple Flask application that allows users to:
 ### 1. Clone the repository
 
 ```bash
-git clone nevilsonani/Ixigo-Internship-Assignment
+git clone https://github.com/nevilsonani/Ixigo-Internship-Assignment
 ```
 
 ### 2. Install dependencies:
