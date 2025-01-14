@@ -8,7 +8,7 @@ This is a simple Flask application that allows users to:
 
 ## Features
 - Fetch news articles related to a given topic from the last two weeks.
-- Add news articles as events to Google Calendar with OAuth2 authentication.
+
 
 ## Setup
 
